@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/repository_name/static/css/main.03e68590.css",
-    "main.js": "/repository_name/static/js/main.66169890.js",
-    "index.html": "/repository_name/index.html",
-    "main.03e68590.css.map": "/repository_name/static/css/main.03e68590.css.map",
-    "main.66169890.js.map": "/repository_name/static/js/main.66169890.js.map"
+    "main.css": "/socia/static/css/main.03e68590.css",
+    "main.js": "/socia/static/js/main.66169890.js",
+    "index.html": "/socia/index.html",
+    "main.03e68590.css.map": "/socia/static/css/main.03e68590.css.map",
+    "main.66169890.js.map": "/socia/static/js/main.66169890.js.map"
   },
   "entrypoints": [
     "static/css/main.03e68590.css",
