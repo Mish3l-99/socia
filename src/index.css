@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
+
+/* variables */
+:root {
+  --color-dark: #031d01;
+  --greeny: #118f08;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* scrollbar removed for feed */
+::-webkit-scrollbar {
+  width: 0px !important;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* styles */
+@layer base {
+  input {
+    @apply outline-none;
+  }
+  .light-mode {
+    @apply bg-[#E7EEE7];
+  }
+  .dark-mode {
+    @apply bg-[#010E00];
+  }
+  body {
+    @apply font-[Poppins] bg-[#E7EEE7];
+  }
+  .nav-container {
+    @apply px-4 md:px-0 py-2 max-w-[1245px] mx-auto;
+  }
+  .logo {
+    @apply text-[#118f08] font-semibold text-2xl md:text-4xl font-[Tapestry] flex justify-center items-center gap-1 mr-8;
+  }
+  .container {
+    @apply p-4 max-w-[1245px] mx-auto;
+  }
+  .search {
+    @apply hidden md:flex justify-center items-center border px-2 py-1 rounded-full border-black lg:w-[440px] bg-[#E7EEE7];
+  }
+  .text-muted {
+    @apply text-[14px] text-gray-400;
+  }
+  .btn {
+    @apply px-4 py-1 cursor-pointer text-sm md:text-lg;
+  }
+  .btn-primary {
+    @apply rounded bg-[#118f08] text-white;
+  }
+  .btn-secondary {
+    @apply rounded text-red-500 bg-[#E7EEE7];
+  }
+  .list li {
+    @apply my-2 text-lg lg:text-xl py-[8px] px-4 hover:bg-[#E7EEE7] hover:text-[#118f08] hover:border-l-4 hover:border-[#118f08] transition duration-700;
+  }
+  .notifics {
+    @apply hidden w-[300px] h-[600px] bg-white text-black p-3 left-[170px] top-[230px] z-20;
+  }
+  .profile {
+    @apply bg-gray-50 p-3 rounded-md;
+  }
+  .list {
+    @apply bg-gray-50 rounded-md py-3;
+  }
+  div.badge {
+    @apply w-5 h-5 flex items-center justify-center text-center bg-red-600 text-white rounded-full absolute top-[4px] left-1;
+  }
+  div.badge span {
+    @apply text-[9px];
+  }
+  .create-post {
+    @apply mt-4 py-2 px-2 bg-gray-50 rounded;
+  }
+  .create-post form {
+    @apply flex gap-2 justify-center items-center;
+  }
+  .create-post form input {
+    @apply w-full;
+  }
+  .stories {
+    @apply grid grid-cols-5 h-[150px] md:h-[230px] gap-1;
+  }
+  .story {
+    @apply flex flex-col justify-between rounded-md relative overflow-hidden text-white;
+  }
+  .story-bg {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+  .prof-s {
+    @apply ml-2 mt-2 border border-[#118f08];
+  }
+  p.name {
+    @apply py-1 px-2 text-[10px] md:text-[14px] bg-black/40;
+  }
+  .post {
+    @apply rounded-md bg-gray-50 mt-4 pb-3;
+  }
+  .post h3 {
+    @apply font-semibold;
+  }
+  .post .top {
+    @apply flex gap-2 p-3;
+  }
+  .post-img img {
+    @apply max-h-[350px];
+  }
+  .post .buttons {
+    @apply flex justify-between items-center py-1 px-3;
+  }
+  .liked-by {
+    @apply px-3 py-1 flex items-center gap-2 text-[14px] bg-gray-100;
+  }
+  .liked-by div.img {
+    @apply w-5 h-5 ml-[-7px];
+  }
+  .liked-by div.img img {
+    @apply rounded-full w-5 h-5 object-cover border;
+  }
+  .messages {
+    @apply p-3 bg-gray-50 rounded;
+  }
+  .requests {
+    @apply mt-4 text-lg;
+  }
 }
